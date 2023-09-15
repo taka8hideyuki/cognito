@@ -1,12 +1,13 @@
 function OnCognitoSignUp() {
 
 	var poolData = {
-		UserPoolId: 'ap-southeast-2_6s1cA5M6j', // Your user pool id here
-		ClientId: '6qsefi57b62s007roqncr9huvo', // Your client id here
+		UserPoolId: 'ap-southeast-2_y9PaY8sso', // Your user pool id here
+		ClientId: '40nctkvdpbgqapunrht8ltru6t', // Your client id here
 	};
 	var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
 
-	var username = document.getElementById("email").value;
+	var username = document.getElementById("name").value;
+	var email = document.getElementById("email").value;
 	var password = document.getElementById("password").value;
 
 	userPool.signUp(username, password, null, null, function(
