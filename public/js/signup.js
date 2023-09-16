@@ -10,7 +10,7 @@ function OnCognitoSignUp() {
 	var email = document.getElementById("email").value;
 	var password = document.getElementById("password").value;
 
-	userPool.signUp(username, password, null, null, function(
+	userPool.signUp(email, password, null, null, function(
 		err,
 		result
 	) {
